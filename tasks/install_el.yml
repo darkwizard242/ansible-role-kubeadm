@@ -1,0 +1,8 @@
+---
+# tasks file for kubeadm | EL Family
+
+- name: EL Family | Downloading archive for {{ kubeadm_app }} {{ kubeadm_version }} to {{ kubeadm_bin_path }}
+  get_url:
+    url: "{{ kubeadm_dl_url }}"
+    dest: "{{ kubeadm_bin_path }}/{{ kubeadm_app }}"
+    mode: "{{ kubeadm_file_mode }}"

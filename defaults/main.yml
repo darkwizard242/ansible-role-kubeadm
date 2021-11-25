@@ -1,0 +1,10 @@
+---
+# defaults file for kubeadm
+
+kubeadm_app: kubeadm
+kubeadm_version: 1.22.4
+kubeadm_os: linux
+kubeadm_arch: amd64
+kubeadm_dl_url: https://dl.k8s.io/release/v{{ kubeadm_version }}/bin/{{ kubeadm_os }}/{{ kubeadm_arch }}/{{ kubeadm_app }}
+kubeadm_bin_path: /usr/local/bin
+kubeadm_file_mode: '0755'

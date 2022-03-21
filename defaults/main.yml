@@ -2,7 +2,7 @@
 # defaults file for kubeadm
 
 kubeadm_app: kubeadm
-kubeadm_version: 1.22.7
+kubeadm_version: 1.22.8
 kubeadm_os: linux
 kubeadm_arch: amd64
 kubeadm_dl_url: https://dl.k8s.io/release/v{{ kubeadm_version }}/bin/{{ kubeadm_os }}/{{ kubeadm_arch }}/{{ kubeadm_app }}

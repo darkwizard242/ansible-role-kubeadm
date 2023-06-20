@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 kubeadm_app: kubeadm
-kubeadm_version: 1.26.5
+kubeadm_version: 1.26.6
 kubeadm_os: linux
 kubeadm_arch: amd64
 kubeadm_dl_url: https://dl.k8s.io/release/v{{ kubeadm_version }}/bin/{{ kubeadm_os }}/{{ kubeadm_arch }}/{{ kubeadm_app }}
@@ -29,7 +29,7 @@ kubeadm_file_mode: '0755'
 Variable          | Description
 ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 kubeadm_app       | Defines the app to install i.e. **kubeadm**
-kubeadm_version   | Defined to dynamically fetch the desired version to install. Defaults to: **1.26.5**
+kubeadm_version   | Defined to dynamically fetch the desired version to install. Defaults to: **1.26.6**
 kubeadm_os        | Defines OS type. Defaults to: **linux**
 kubeadm_arch      | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 kubeadm_dl_url    | Defines URL to download the kubeadm binary from.

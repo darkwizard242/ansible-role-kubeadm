@@ -1,4 +1,4 @@
-[![build-test](https://github.com/darkwizard242/ansible-role-kubeadm/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-kubeadm/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-kubeadm/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-kubeadm/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/57071?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/57071?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/57071?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-kubeadm?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-kubeadm?color=orange&style=flat-square)
+[![build-test](https://github.com/darkwizard242/ansible-role-kubeadm/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-kubeadm/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-kubeadm/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-kubeadm/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/d/darkwizard242/kubeadm) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-kubeadm&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-kubeadm) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-kubeadm?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-kubeadm?color=orange&style=flat-square)
 
 # Ansible Role: kubeadm
 
@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 kubeadm_app: kubeadm
-kubeadm_version: 1.27.7
+kubeadm_version: 1.30.0
 kubeadm_os: linux
 kubeadm_arch: amd64
 kubeadm_dl_url: https://dl.k8s.io/release/v{{ kubeadm_version }}/bin/{{ kubeadm_os }}/{{ kubeadm_arch }}/{{ kubeadm_app }}
@@ -29,7 +29,7 @@ kubeadm_file_mode: '0755'
 Variable          | Description
 ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 kubeadm_app       | Defines the app to install i.e. **kubeadm**
-kubeadm_version   | Defined to dynamically fetch the desired version to install. Defaults to: **1.27.7**
+kubeadm_version   | Defined to dynamically fetch the desired version to install. Defaults to: **1.30.0**
 kubeadm_os        | Defines OS type. Defaults to: **linux**
 kubeadm_arch      | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 kubeadm_dl_url    | Defines URL to download the kubeadm binary from.

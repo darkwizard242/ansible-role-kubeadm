@@ -17,24 +17,32 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 kubeadm_app: kubeadm
 kubeadm_version: 1.30.2
-kubeadm_os: linux
-kubeadm_arch: amd64
-kubeadm_dl_url: https://dl.k8s.io/release/v{{ kubeadm_version }}/bin/{{ kubeadm_os }}/{{ kubeadm_arch }}/{{ kubeadm_app }}
+kubeadm_os: "{{ ansible_system | lower }}"
+kubeadm_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+kubeadm_dl_url: https://dl.k8s.io/release/v{{ kubeadm_version }}/bin/{{ kubeadm_os }}/{{ kubeadm_architecture_map[ansible_architecture] }}/{{ kubeadm_app }}
 kubeadm_bin_path: /usr/local/bin
 kubeadm_file_mode: '0755'
 ```
 
 ### Variables table:
 
-Variable          | Description
------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------
-kubeadm_app       | Defines the app to install i.e. **kubeadm**
-kubeadm_version   | Defined to dynamically fetch the desired version to install. Defaults to: **1.30.2**
-kubeadm_os        | Defines OS type. Defaults to: **linux**
-kubeadm_arch      | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
-kubeadm_dl_url    | Defines URL to download the kubeadm binary from.
-kubeadm_bin_path  | Defined to dynamically set the appropriate path to store kubeadm binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-kubeadm_file_mode | Mode for the binary file of kubeadm.
+Variable                 | Description
+------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------
+kubeadm_app              | Defines the app to install i.e. **kubeadm**
+kubeadm_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.30.2**
+kubeadm_os               | Defines OS type.
+kubeadm_architecture_map | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture.
+kubeadm_dl_url           | Defines URL to download the kubeadm binary from.
+kubeadm_bin_path         | Defined to dynamically set the appropriate path to store kubeadm binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+kubeadm_file_mode        | Mode for the binary file of kubeadm.
 
 ## Dependencies
 

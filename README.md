@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 kubeadm_app: kubeadm
-kubeadm_version: 1.32.3
+kubeadm_version: 1.33.0
 kubeadm_os: "{{ ansible_system | lower }}"
 kubeadm_architecture_map:
   amd64: amd64
@@ -37,7 +37,7 @@ kubeadm_file_mode: '0755'
 Variable                 | Description
 ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 kubeadm_app              | Defines the app to install i.e. **kubeadm**
-kubeadm_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.32.3**
+kubeadm_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.33.0**
 kubeadm_os               | Defines OS type.
 kubeadm_architecture_map | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture.
 kubeadm_dl_url           | Defines URL to download the kubeadm binary from.

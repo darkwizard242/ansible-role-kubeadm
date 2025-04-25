@@ -2,7 +2,7 @@
 # defaults file for kubeadm
 
 kubeadm_app: kubeadm
-kubeadm_version: 1.32.3
+kubeadm_version: 1.33.0
 kubeadm_os: "{{ ansible_system | lower }}"
 kubeadm_architecture_map:
   amd64: amd64
